@@ -566,14 +566,318 @@
 //   console.log(a * a);
 // });
 
-function greet(name, callback) {
-  console.log("Hello, " + name);
-  callback();
-}
+// function greet(name, callback) {
+//   console.log("Hello, " + name);
+//   callback();
+// }
 
-function sayGoodbye() {
-  console.log("Goodbye!");
-}
+// function sayGoodbye() {
+//   console.log("Goodbye!");
+// }
 
-// Call greet and pass sayGoodbye as a callback
-greet("Saeedullah", sayGoodbye);
+// // Call greet and pass sayGoodbye as a callback
+// greet("Saeedullah", sayGoodbye);
+
+// document.body.style.background = "yellow";
+
+//   ALL ABOUT DOM IN JAVASCRIPT
+// document.body.innerHTML = "green";
+
+// let name = document.getElementById("head");
+// const Quotes = ["hello wrold", "abcd", "zohaib"];
+// const randomText = () => {
+//   let idx = Math.floor(Math.random() * Quotes.length);
+//   name.innerText = Quotes[idx];
+//   console.log(idx);
+// };
+
+// let head = document.getElementsByTagName("p");
+// console.log(head);
+// console.dir(head);
+
+// let el = document.querySelector("p");
+// console.log(el);
+// let ele = document.querySelectorAll("p,head");
+// console.log(ele);
+
+// let dev = document.querySelector("div");
+// console.log((dev.innerHTML = "saeed"));
+
+// let i = document.getElementById("head");
+// console.log((i.innerHTML = "ali khan"));
+
+// let heading = document.querySelector("h2");
+// console.log(heading.textContent);
+
+// PRACTICE QUESTIONS
+
+// let h1 = document.querySelector("h2");
+// console.dir(h1);
+// h1.innerText = h1.innerText + " student from Hazara University";
+
+// let divs = document.querySelectorAll(".box");
+// // console.log(divs);
+// // for (let i = 0; i < divs.length; i++) {
+// //   divs[0].innerText = "first number";
+// //   divs[1].innerText = "2nd number";
+// //   divs[2].innerText = "3rd number";
+// // }
+// let idx = 0;
+// for (let dev of divs) {
+//   console.log(dev);
+//   dev.innerText = `hello ${idx}`;
+//   idx++;
+// }
+
+// let div = document.getElementsByClassName("box");
+// // console.log(div);
+
+// let name = div.getAttribute("name");
+// console.log(name);
+// let div = document.querySelector("div");
+// let clas = div.setAttribute("name", "boxes");
+// console.log(clas);
+
+// let div = document.querySelector("div");
+// console.log(div);
+// div.style.background = "red";
+// div.style.fontSize = "30px";
+// div.style.fontWeight = "bold";
+// div.style.fontFamily = "sans sarif";
+// div.innerText = "hello";
+// let atr = document.querySelector("div");
+// console.log(div);
+// let ar = div.getAttribute("name");
+// console.log(ar);
+// div.style.visibility = "hidden";
+
+// let btn = document.createElement("div");
+// btn.innerText = "click me";
+// console.log(btn);
+// let div = document.querySelector("div");
+// div.append(btn);
+
+// let btn2 = document.createElement("div");
+// btn2.innerText = "click me";
+// let div = document.querySelector("div");
+// div.prepend(btn2);
+
+// let btn3 = document.createElement("div");
+// btn3.innerText = "click me";
+// let div = document.querySelector("div");
+// div.before(btn3);
+
+// let btn4 = document.createElement("div");
+// btn4.innerText = "click me";
+// let div = document.querySelector("div");
+// div.after(btn4);
+
+// let h1 = document.createElement("h1");
+// h1.innerHTML = "<i>hello , i am saeed ullah</i>";
+// let div = document.querySelector("body");
+// div.prepend(h1);
+
+// let pa = document.createElement("h6");
+// // pa.remove();
+// pa.innerText = "this is a graph";
+// let n = document.querySelector("p");
+// n.append(pa);
+// n.remove(pa);
+
+// PRACTICE QUESTIONS ABOUT DOM PART 2
+
+// let newbtn = document.createElement("button");
+// newbtn.innerText = "click me!";
+// newbtn.style.background = "red";
+// newbtn.style.color = "white";
+// let body = document.querySelector("body");
+// body.prepend(newbtn);
+
+//  CLASSES IN JS
+
+// class CreateDomElements {
+//   name = "saeedullah";
+//   constructor(target) {
+//     console.log("classes has been initialized....");
+//     this.target = target;
+//   }
+
+//   H1(text, cb) {
+//     let h1 = document.createElement("h1");
+//     h1.innerText = text;
+//     this.target.append(h1);
+//     cb("my message");
+//   }
+
+//   span(text) {
+//     let span = document.createElement("span");
+//     span.innerHTML = text;
+//     span.style.color = "red";
+//     this.target.append(span);
+//   }
+// }
+
+// function callback_func(value) {
+//   console.log("the cb function", value);
+// }
+// const body = document.querySelector("body");
+// const dom = new CreateDomElements(body);
+
+// dom.H1("this is my text", callback_func);
+
+// let emp = {
+//   tax() {
+//     console.log("the tax is 10 %");
+//   },
+// };
+// const saeed = {
+//   salary: 30000,
+//   tax() {
+//     console.log("the tax is 20%");
+//   },
+// };
+// saeed.__proto__ = emp;
+
+// class cars {
+//   start() {
+//     console.log("THE CAR WILL BE START");
+//   }
+//   stop() {
+//     console.log("the car will be stop");
+//   }
+// }
+// let BMW = new cars();
+// let fortuner = new cars();
+// let lexus = new cars();
+
+// class person {
+//   constructor(name, age, std) {
+//     this.name = name;
+//     this.age = age;
+//     this.std = std;
+//     this.greet();
+//   }
+//   greet() {
+//     console.log(
+//       `hello my name is ${this.name} and i am ${this.age} years old and i am the student of class ${this.std}`
+//     );
+//   }
+// }
+// let person1 = new person("saeedullah", 22, "7th");
+// console.log(person1);
+// let person2 = new person("zohaib", 21, "9th");
+// console.log(person2);
+
+// let multiplier = 2;
+// while (multiplier <= 10) {
+//   for (let i = 1; i <= 10; i++) {
+//     document.write(`<p>${multiplier} x ${i} = ${i * multiplier}`);
+//   }
+//   multiplier++;
+// }
+
+// const table = document.createElement("table");
+// const tbody = document.createElement("tbody");
+// const body_tr = document.createElement("tr");
+// body_tr.innerHTML = `<th>val 1</th> <th>muxkasdf</th> <th>equal</th>`;
+// table.appendChild(body_tr);
+// let multiplier = 2;
+// while (multiplier <= 20) {
+//   const tr = document.createElement("tr");
+//   for (let i = 1; i <= 10; i++) {
+//     const td1 = document.createElement("td");
+//     td1.innerHTML = multiplier;
+//     const td2 = document.createElement("td");
+//     td2.innerHTML = i;
+//     const td3 = document.createElement("td");
+//     td3.innerHTML = multiplier * i;
+
+//     tr.appendChild(td1);
+
+//     tr.appendChild(td2);
+
+//     tr.appendChild(td3);
+//     // document.write(`<p>${multiplier} * ${i} = ${multiplier * i}</p>`);
+//   }
+//   table.appendChild(tr);
+//   multiplier++;
+// }
+// document.body.appendChild(table);
+
+// class person {
+//   constructor(name) {
+//     this.species = "home sapians";
+//     this.name = name;
+//   }
+//   eat() {
+//     console.log("every person eating");
+//   }
+// }
+// class engineer extends person {
+//   constructor(name) {
+//     super(name);
+//   }
+//   work() {
+//     super.eat();
+//     console.log("coding, programing");
+//   }
+// }
+
+// let saeed = new engineer("saeedullah");
+
+// CLASSES PRACTICE QUESTIONS
+
+// PRACTICE QUESTION NO 1
+
+// class user {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   viewData() {
+//     console.log(`hello, my name is ${this.name} and my email is ${this.email}`);
+//   }
+// }
+// let student1 = new user("saeed ullah", "saeed@gmail.com");
+// let student2 = new user("ikram ullah", "ikram@gmail.com");
+// let student3 = new user("saif ullah", "saif@gmail.com");
+
+// PRACTICE QUESTION NO 2
+// let data = "old data";
+// class user {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+//   viewData() {
+//     console.log("this is my website");
+//   }
+// }
+// class Admin extends user {
+//   constructor(name, email) {
+//     super(name, email);
+//   }
+//   editData() {
+//     data = "edit the information";
+//   }
+// }
+// let student1 = new Admin("saeed ", "saeed@gmail.com");
+// let student12 = new Admin("ali ", "saeed@gmail.com");
+// let student13 = new Admin("ikram ", "saeed@gmail.com");
+
+// TRY AND CATCH IN JAVASCRIPT
+
+let a = 4;
+let b = 3;
+console.log("a = ", a);
+console.log("b = ", b);
+console.log("a + b =", a + b);
+try {
+  console.log("a + b =", a + e + d);
+} catch (err) {
+  console.log(err);
+}
+console.log("a + b =", a + b);
+console.log("a * b =", a * b);
+console.log("a - b =", a - b);
+console.log("a / b =", a / b);

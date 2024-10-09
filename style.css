@@ -1,6 +1,38 @@
-*{
+* {
     background: rgb(152, 240, 211);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: blue; */
 }
 h1{
-    color: orangered;
+    color: orange;
+}
+button{
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+}
+#box{
+    height: 250px;
+    width: 100px;
+    border: 2px black solid;
+    margin: 5px;
+    text-align: center;
+    padding: 15px 0 0 0;
+    background: #4dff39;
+}
+#box h3{
+    background: #4dff39;
+
+}
+#box ul{
+    background: #4dff39;
+
+}
+#box ul li{
+    background: #4dff39;
+
+}
+#box div{
+    background: #4dff39;
 }
