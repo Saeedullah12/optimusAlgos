@@ -843,6 +843,7 @@
 // let student3 = new user("saif ullah", "saif@gmail.com");
 
 // PRACTICE QUESTION NO 2
+
 // let data = "old data";
 // class user {
 //   constructor(name, email) {
@@ -867,17 +868,57 @@
 
 // TRY AND CATCH IN JAVASCRIPT
 
-let a = 4;
-let b = 3;
-console.log("a = ", a);
-console.log("b = ", b);
-console.log("a + b =", a + b);
-try {
-  console.log("a + b =", a + e + d);
-} catch (err) {
-  console.log(err);
-}
-console.log("a + b =", a + b);
-console.log("a * b =", a * b);
-console.log("a - b =", a - b);
-console.log("a / b =", a / b);
+// let a = 4;
+// let b = 3;
+// console.log("a = ", a);
+// console.log("b = ", b);
+// console.log("a + b =", a + b);
+// try {
+//   console.log("a + b =", a + c);
+// } catch (err) {
+//   console.log(err);
+// }
+// console.log("a + b =", a + b);
+// console.log("a * b =", a * b);
+// console.log("a - b =", a - b);
+// console.log("a / b =", a / b);
+
+// PRACTICE QUESTION NO 3
+
+// let cls = document.querySelector("p");
+// cls.classList.add("newpara");
+
+// ALL ABOUT EVENTS IN JS
+
+// let btn = document.querySelector("button");
+// btn.onclick = (e) => {
+//   console.log(e);
+//   console.log(e.type, e.target, e.clientX);
+// };
+
+// let btn2 = document.querySelector("button");
+// btn2.addEventListener("mouseover", () => {
+//   console.log("button was clicked once");
+// });
+// const hand3 = (e) => {
+//   console.log("2 times clicked");
+//   console.log(e.type, e.target, e.clientX, e.clientY);
+// };
+// btn2.addEventListener("mouseover", hand3);
+// btn2.addEventListener("mouseover", () => {
+//   console.log("button was clicked thrice");
+// });
+// btn2.removeEventListener("mouseover", hand3);
+
+let mode = document.querySelector("button");
+let cm = "light";
+mode.addEventListener("click", () => {
+  if (cm === "light") {
+    cm = "dark";
+    document.querySelector("body").style.backgroundColor = "green";
+  } else {
+    cm = "light";
+    document.querySelector("body").style.backgroundColor = "orangered";
+  }
+  console.log(cm);
+});

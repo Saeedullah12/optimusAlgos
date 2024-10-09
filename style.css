@@ -1,5 +1,5 @@
 * {
-    background: rgb(152, 240, 211);
+    /* background: rgb(0, 0, 0); */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* color: blue; */
 }
@@ -35,4 +35,10 @@ button{
 }
 #box div{
     background: #4dff39;
+}
+.para{
+    color: whitesmoke;
+}
+.newpara{
+    background-color: black;
 }
