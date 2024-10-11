@@ -910,15 +910,271 @@
 // });
 // btn2.removeEventListener("mouseover", hand3);
 
-let mode = document.querySelector("button");
-let cm = "light";
-mode.addEventListener("click", () => {
-  if (cm === "light") {
-    cm = "dark";
-    document.querySelector("body").style.backgroundColor = "green";
-  } else {
-    cm = "light";
-    document.querySelector("body").style.backgroundColor = "orangered";
-  }
-  console.log(cm);
-});
+// let mode = document.querySelector("button");
+// let cm = "light";
+// mode.addEventListener("click", () => {
+//   if (cm === "light") {
+//     cm = "dark";
+//     document.querySelector("body").style.backgroundColor = "green";
+//   } else {
+//     cm = "light";
+//     document.querySelector("body").style.backgroundColor = "orangered";
+//   }
+//   console.log(cm);
+// });
+// function myfunc() {
+//   console.log("hello");
+// }
+// myfunc();
+
+// const users = [
+//   {
+//     name: "xyz",
+//     about: (cb) => {
+//       cb();
+//     },
+//   },
+//   {
+//     name: "xyz",
+//     about: (cb) => {
+//       cb();
+//     },
+//   },
+//   {
+//     name: "xyz",
+//     about: (cb) => {
+//       cb("myValue is here");
+//     },
+//   },
+// ];
+// users.forEach((user, i) => {
+//   const myCb = () => {
+//     console.log("hello world", i);
+//   };
+//   user.about(myCb);
+//   let html = `
+//     <button
+//       onclick="${() => {
+//         user.about(myCb);
+//       }}"
+//     >${user.name}</button>
+//   `;
+//   document.write(html);
+// });
+
+// CALLBACK FUNCTION
+
+// function greet(name) {
+//   console.log(`hello , ${name} how are you feeling`);
+// }
+// function sayhello(call) {
+//   const name = prompt("enter your name here");
+//   call(name);
+// }
+// sayhello(greet);
+
+// SETTIMEOUT FUNCTION
+
+// function hello() {
+//   console.log("HELLO");
+// }
+// setTimeout(() => console.log("hello"), 2000);
+
+// function hello() {
+//   console.log("hello");
+// }
+// setTimeout(hello, 2000);
+// setTimeout(() => console.log("HELLO"), 2000);
+
+// Asynchronous Function
+
+// console.log("one");
+// console.log("two");
+// console.log("three");
+// setTimeout(() => {
+//   console.log("hello");
+// }, 3000);
+// console.log("four");
+// console.log("five");
+
+// CALLBACK FUNCTION
+
+// function sum(a, b) {
+//   console.log(a * b);
+// }
+// function call(a, b, cal) {
+//   cal(a, b);
+// }
+// call(4, 2, (a, b) => {
+//   console.log(a + b);
+// });
+
+// function data(id) {
+//   setTimeout(() => {
+//     console.log("data", id);
+//   }, 2000);
+// }
+
+// function data(id, next) {
+//   setTimeout(() => {
+//     console.log("data", id);
+//     if (next) {
+//       next();
+//     }
+//   }, 1000);
+// }
+// data(1, () => {
+//   data(2, () => {
+//     data(3, () => {
+//       data(4);
+//     });
+//   });
+// });
+
+// function data(id, next) {
+//   setTimeout(() => {
+//     console.log("data", id);
+//     if (next) {
+//       next();
+//     }
+//   }, 1000);
+// }
+// data(1, () => {
+//   data(2, () => {
+//     data(3, () => {
+//       data(4, () => {
+//         data(5, () => {
+//           data(6);
+//         });
+//       });
+//     });
+//   });
+// });
+
+// const myPromise = new Promise((resolve, reject) => {
+// Simulate an asynchronous operation using setTimeout
+// setTimeout(() => {
+//   const success = true; // Change to false to simulate failure
+//   if (success) {
+//     resolve("Operation was successful!");
+//   } else {
+//     reject("Operation failed.");
+//   }
+// }, 2000); // 2-second delay
+
+// });
+
+// myPromise
+//   .then((res) => {
+//     console.log("res", res);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+// console.log("my other code");
+
+// const getItems = async () => {
+//   await fetch("http://127.0.0.1:5500/data.json")
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((res) => console.log(res))
+//     .catch((err) => console.error(err));
+// };
+
+// getItems();
+// // console.log("hello");
+// let loading = "";
+// const getJoke = async () => {
+//   const url = "https://official-joke-api.appspot.com/random_joke";
+//   let data = [];
+//   loading = "loading....";
+//   await fetch(url)
+//     .then((res) => res.json())
+//     .then((res) => {
+//       console.log(res);
+//       data = res;
+//       loading = "";
+//     })
+//     .catch((err) => console.error(err));
+//   console.log(loading);
+//   loading = "";
+//   return data;
+// };
+
+// const joke = getJoke();
+// console.log(joke);
+
+// function fun() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("hello");
+//       resolve("success");
+//     }, 2000);
+//   });
+// }
+// console.log("fetching data");
+// let p1 = fun();
+// p1.then((res) => {
+//   console.log(res);
+// });
+// p1.catch((err) => {
+//   console.log(err);
+// });
+
+// function fun() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("HELLO ZOHAIB");
+//       resolve("success");
+//     }, 2000);
+//   });
+// }
+// let p1 = fun();
+// p1.then((responce) => {
+//   console.log(responce);
+// });
+// p1.then((err) => {
+//   console.log(err);
+// });
+
+// ASYNC AWAIT IN JS
+
+// function api() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("weather data");
+//       resolve(200);
+//     }, 2000);
+//   });
+// }
+// async function wetherdata() {
+//   await api();
+// }
+// function getData(dataid) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataid);
+//       resolve("200");
+//     }, 2000);
+//   });
+// }
+// (async function data() {
+//   console.log("getting data === 1");
+//   await getData(1);
+//   console.log("getting data == 2");
+//   await getData(2);
+//   console.log("getting data == 3");
+//   await getData(3);
+//   console.log("getting data == 3");
+//   await getData(4);
+// })();
+
+//  FETCH API IN JS
+
+let URL = "https://cat-fact.herokuapp.com/#/cat/facts";
+
+const getfact = async () => {
+  let responce = await fetch(URL);
+  console.log(responce);
+};
